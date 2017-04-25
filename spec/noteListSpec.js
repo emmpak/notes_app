@@ -16,8 +16,9 @@
   function testSaveNote() {
     // var noteList = new NoteList();
     // var note = new Note();
-    noteList.saveNote("Hello World")
+    noteList.saveNote("hey");
     assert.isEqual(noteList.allNotes.length, 1)
+    assert.doesInclude(noteList.allNotes[0].text, "hey")
   }
 
   testNoteList();
