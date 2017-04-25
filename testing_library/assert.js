@@ -24,7 +24,23 @@ var assert = {
     if (actual === expected) {
       console.log(actual + ' equals ' + expected);
     } else {
-      throw new Error("Expected " + expected + "but got " + actual);
+      throw new Error("Expected " + expected + " but got " + actual);
+    }
+  },
+
+  isNotEqual: function(actual, expected) {
+    if (actual !== expected) {
+      console.log(actual + "doesn't equal" + expected);
+    } else {
+      throw new Error(actual + " & " + expected + " are the same value")
+    }
+  },
+  
+  doesInclude: function(container, item) {
+    if (container.includes(item)) {
+      console.log(container + " includes " + item)
+    } else {
+      throw new Error(container + " does not include " + item)
     }
   }
 };

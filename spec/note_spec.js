@@ -1,15 +1,23 @@
 // var assert = require("./testing_library/assert").assert
 (function(exports) {
-  function testContentOfNote() {
+  (function testContentOfNote() {
     var note = new Note("This is a note!");
     assert.isTrue(note.text === "This is a note!");
-  };
-  testContentOfNote();
+  })();
 
-  function testGetContentOfNote() {
+  (function testGetContentOfNote() {
     var note = new Note("This is a note!");
     assert.isEqual(note.getText(), note.text);
-  }
+  })();
 
-  testGetContentOfNote();
+  (function testGetContentOfNote() {
+    var note = new Note("This is a note!");
+    assert.doesInclude(note.getText(), "This");
+  })();
+
+  (function testGetContentOfNote() {
+    var note = new Note("This is a note!");
+    assert.isNotEqual(note.getText(), "Practice test");
+  })();
+
 })(this);
