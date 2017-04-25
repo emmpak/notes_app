@@ -8,6 +8,6 @@
   };
 
   exports.Note = Note;
-  exports.getText = Note.getText;
+  exports.Note.getText = Note.getText;
 
 })(this);
