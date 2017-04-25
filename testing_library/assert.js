@@ -46,6 +46,22 @@ var assert = {
     }
   },
 
+  isLesserThan: function(assertionToCheck, otherNumber) {
+    if(assertionToCheck < otherNumber) {
+      console.log(assertionToCheck + " is less than " + otherNumber)
+    } else {
+      throw new Error(assertionToCheck + " is not less than " + otherNumber)
+    }
+  },
+
+  isGreaterThan: function(assertionToCheck, otherNumber) {
+    if(assertionToCheck > otherNumber) {
+      console.log(assertionToCheck + " is greater than " + otherNumber)
+    } else {
+      throw new Error(assertionToCheck + " is not greater than " + otherNumber)
+    }
+  },
+
 
   arraysEqual: function(array1, array2) {
     if (arraysMatch(array1, array2)) {
