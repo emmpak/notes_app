@@ -8,9 +8,8 @@
   };
 
   NoteList.prototype.saveNote = function(note) {
-    return note;
+    return this.allNotes.push(note);
   }
 
   exports.NoteList = NoteList;
-  exports.NoteList.getNotes = NoteList.getNotes;
 })(this);
