@@ -16,7 +16,7 @@
   function testSaveNote() {
     // var noteList = new NoteList();
     // var note = new Note();
-    noteList.saveNote(note)
+    noteList.saveNote("Hello World")
     assert.isEqual(noteList.allNotes.length, 1)
   }
 
