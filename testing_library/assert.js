@@ -8,6 +8,7 @@ var assert = {
       console.log("Truthy PASSED");
     }
   },
+
   isFalse: function(assertionToCheck) {
     if( assertionToCheck ) {
       throw new Error("Assertion failed: " + assertionToCheck + " is not falsey");
@@ -15,6 +16,7 @@ var assert = {
       console.log('Falsey PASSED');
     }
   },
+  
   isEqual: function(actual, expected) {
     // this.isTrue(
     //   actual === expected,
@@ -35,7 +37,7 @@ var assert = {
       throw new Error(actual + " & " + expected + " are the same value")
     }
   },
-  
+
   doesInclude: function(container, item) {
     if (container.includes(item)) {
       console.log(container + " includes " + item)
