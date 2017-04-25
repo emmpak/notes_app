@@ -20,4 +20,14 @@
     assert.isNotEqual(note.getText(), "Practice test");
   })();
 
+  (function testGetContentOfNote() {
+    var note = new Note("This is a note!");
+    assert.isLesserThan(note.text.length, 20);
+  })();
+
+  (function testGetContentOfNote() {
+    var note = new Note("This is a note!");
+    assert.isGreaterThan(note.text.length, 10);
+  })();
+
 })(this);
