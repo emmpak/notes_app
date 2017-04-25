@@ -2,7 +2,7 @@ var assert = {
   isTrue: function(assertionToCheck, message) {
     if (!assertionToCheck) {
       // var errorMessage = message || "Expected true but got false"
-      throw new Error("Assertion failed: " + assertionToCheck + " is not truthy");
+      console.error("Assertion failed: " + assertionToCheck + " is not truthy");
     } else {
       // var passedMessage = message || "Truthy PASSED"
       console.log("Truthy PASSED");
@@ -11,7 +11,7 @@ var assert = {
 
   isFalse: function(assertionToCheck) {
     if( assertionToCheck ) {
-      throw new Error("Assertion failed: " + assertionToCheck + " is not falsey");
+      console.error("Assertion failed: " + assertionToCheck + " is not falsey");
     } else {
       console.log('Falsey PASSED');
     }
@@ -26,7 +26,7 @@ var assert = {
     if (actual === expected) {
       console.log(actual + ' equals ' + expected);
     } else {
-      throw new Error("Expected " + expected + " but got " + actual);
+      console.error("Expected " + expected + " but got " + actual);
     }
   },
 
@@ -34,7 +34,7 @@ var assert = {
     if (actual !== expected) {
       console.log(actual + "doesn't equal" + expected);
     } else {
-      throw new Error(actual + " & " + expected + " are the same value")
+      console.error(actual + " & " + expected + " are the same value")
     }
   },
 
@@ -42,7 +42,7 @@ var assert = {
     if (container.includes(item)) {
       console.log(container + " includes " + item)
     } else {
-      throw new Error(container + " does not include " + item)
+      console.error(container + " does not include " + item)
     }
   },
 
@@ -50,7 +50,7 @@ var assert = {
     if(assertionToCheck < otherNumber) {
       console.log(assertionToCheck + " is less than " + otherNumber)
     } else {
-      throw new Error(assertionToCheck + " is not less than " + otherNumber)
+      console.error(assertionToCheck + " is not less than " + otherNumber)
     }
   },
 
@@ -58,7 +58,7 @@ var assert = {
     if(assertionToCheck > otherNumber) {
       console.log(assertionToCheck + " is greater than " + otherNumber)
     } else {
-      throw new Error(assertionToCheck + " is not greater than " + otherNumber)
+      console.error(assertionToCheck + " is not greater than " + otherNumber)
     }
   },
 
@@ -67,7 +67,7 @@ var assert = {
     if (arraysMatch(array1, array2)) {
       console.log(array1 + " is the same as " + array2);
     } else {
-      throw new Error("Assertion Failed: " + array1 + " Does not Equal " + array2);
+      console.error("Assertion Failed: " + array1 + " Does not Equal " + array2);
     }
   }
 };
