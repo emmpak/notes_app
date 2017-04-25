@@ -7,6 +7,10 @@
     return this.allNotes;
   };
 
+  NoteList.prototype.saveNote = function(text) {
+    var note = new Note(text);
+    return this.allNotes.push(note);
+  }
+
   exports.NoteList = NoteList;
-  exports.NoteList.getNotes = NoteList.getNotes;
 })(this);
