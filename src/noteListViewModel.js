@@ -13,8 +13,3 @@
 
   exports.NoteListView = NoteListView;
 })(this);
-
-
-
-
-var html = "<ul><li><div>Hello</div></li><li><div>World</div></li></ul>";
