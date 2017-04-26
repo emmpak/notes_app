@@ -1,15 +1,13 @@
 list = new NoteList();
-list.saveNote("Favourite drink: seltzer");
-list.saveNote("Will loves JavaScript");
+
 
 var controller = new NoteController(list);
 controller.setupNoteList();
 
-makeUrlChangeShowNoteForCurrentPage();
 
-function makeUrlChangeShowNoteForCurrentPage() {
+(function makeUrlChangeShowNoteForCurrentPage() {
   window.addEventListener("hashchange", showNoteForCurrentPage);
-};
+})();
 
 function showNoteForCurrentPage() {
   controller.showNote(list.getSpecificNote(getNoteFromURL(window.location)));
@@ -18,3 +16,11 @@ function showNoteForCurrentPage() {
 function getNoteFromURL(location) {
   return location.hash.split("/")[1];
 }
+
+(function makeCreateButtonClickAddNote() {
+  document.getElementById("create").addEventListener('click', function(clickEvent) {
+    clickEvent.preventDefault();
+    list.saveNote(document.getElementById('text').value);
+    controller.setupNoteList();
+});
+})();
