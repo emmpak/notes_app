@@ -12,7 +12,7 @@
     noteList.saveNote("Hello");
     noteList.saveNote("World");
     var noteListView = new NoteListView(noteList);
-    var html = "<ul><li><div>Hello</div></li><li><div>World</div></li></ul>";
+    var html = "<ul><li><div><a href=#notes/0>Hello</a></div></li><li><div><a href=#notes/1>World</a></div></li></ul>";
     assert.isEqual(noteListView.getAllNotes(),html);
   }
 
@@ -20,7 +20,7 @@
     var noteList = new NoteList();
     noteList.saveNote("This is a note! This is a note!");
     var noteListView = new NoteListView(noteList);
-    var html = "<ul><li><div>This is a note! This</div></li></ul>"
+    var html = "<ul><li><div><a href=#notes/0>This is a note! This</a></div></li></ul>"
     assert.isEqual(noteListView.getAllNotes(),html);
   }
 
