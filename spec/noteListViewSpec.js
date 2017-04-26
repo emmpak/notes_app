@@ -12,8 +12,8 @@
     noteList.saveNote("Hello");
     noteList.saveNote("World");
     var noteListView = new NoteListView(noteList);
-    var html = "<ul><li><div>Hello</div></li><li><div>World</div></li></ul>";
-    assert.isEqual(noteListView.getAllNotes(),html);
+    var html = "<ul><li><div>hey</div></li><li><div>Hello</div></li><li><div>World</div></li></ul>";
+    assert.doesInclude(noteListView.getAllNotes(), html);
   }
 
   testNoteListView();

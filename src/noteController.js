@@ -1,16 +1,21 @@
 
 (function(exports){
   function NoteController(noteList) {
-
-    this.noteListView = new NoteListView(noteList);
-
-
+    noteListView = new NoteListView(noteList);
   }
+
+  NoteController.prototype = {
+    setupNoteList: function () {
+        document.getElementById('list').innerHTML = noteListView.getAllNotes();
+    }
+  };
+
   exports.NoteController = NoteController;
 })(this);
 
+// updated above so it calls a new method to load
+// the notes list on page load
 
 
-document.getElementById('app').innerHTML = "Howdy";
-
-document.getElementById('list').innerHTML = .getAllNotes();
+// remove below as its not required
+// document.getElementById('app').innerHTML = "Howdy";
