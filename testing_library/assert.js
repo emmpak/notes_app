@@ -1,10 +1,8 @@
 var assert = {
   isTrue: function(assertionToCheck, message) {
     if (!assertionToCheck) {
-      // var errorMessage = message || "Expected true but got false"
       console.error("Assertion failed: " + assertionToCheck + " is not truthy");
     } else {
-      // var passedMessage = message || "Truthy PASSED"
       console.log("Truthy PASSED");
     }
   },
@@ -18,11 +16,6 @@ var assert = {
   },
 
   isEqual: function(actual, expected) {
-    // this.isTrue(
-    //   actual === expected,
-    //   "Expected " + expected + "but got " + actual
-    // );
-
     if (actual === expected) {
       console.log(actual + ' equals ' + expected);
     } else {

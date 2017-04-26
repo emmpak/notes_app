@@ -1,4 +1,3 @@
-
 (function(exports){
   function NoteController(noteList) {
     noteListView = new NoteListView(noteList);
@@ -16,10 +15,3 @@
 
   exports.NoteController = NoteController;
 })(this);
-
-// updated above so it calls a new method to load
-// the notes list on page load
-
-
-// remove below as its not required
-// document.getElementById('app').innerHTML = "Howdy";
