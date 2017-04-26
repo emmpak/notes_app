@@ -16,6 +16,15 @@
     assert.isEqual(noteListView.getAllNotes(),html);
   }
 
+  function testGetAllNotes20() {
+    var noteList = new NoteList();
+    noteList.saveNote("This is a note! This is a note!");
+    var noteListView = new NoteListView(noteList);
+    var html = "<ul><li><div>This is a note! This</div></li></ul>"
+    assert.isEqual(noteListView.getAllNotes(),html);
+  }
+
+  testGetAllNotes20();
   testNoteListView();
   testGetAllNotes();
 })(this);
