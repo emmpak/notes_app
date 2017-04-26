@@ -17,8 +17,11 @@
     var noteList = new NoteList();
     var note = new Note();
     noteList.saveNote("hey");
-    assert.isEqual(noteList.allNotes.length, 1)
-    assert.doesInclude(noteList.allNotes[0].text, "hey")
+    assert.isEqual(noteList.allNotes.length, 1);
+    assert.doesInclude(noteList.allNotes[0].text, "hey");
+    assert.isEqual(noteList.allNotes[0].id,0)
+    noteList.saveNote("hey");
+    assert.isEqual(noteList.allNotes[1].id,1)
   }
 
   testNoteList();
